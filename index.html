@@ -4,18 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./index.js" defer></script>
+
+   
+    <script src="./index.js" defer type="module"></script>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Patnat Pizzaretto</title>
   </head>
   <body>
     <header>
       <div class="top-header">
-        <div class="logo">Patnat Pizzaretto</div>
-        <div class="icons">
-          <span class="cart">cart</span>
-          <span class="login">login</span>
+        <div class="logo"><span>Patnat Pizzaretto</span>
+          <span class="material-icons">
+            restaurant_menu
+            </span>
         </div>
+        <div class="icons">
+          <div class="cart">
+            <span class="material-icons"> shopping_cart </span>
+            
+          </div>
+          <div class="login">
+            <span class="material-icons"> login </span>
+          </div>
+        </div>
+        
       </div>
       <ul class="nav list-items">
         <li class="nav-item"><a href="#deals">DEALS</a></li>
