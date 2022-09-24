@@ -11,23 +11,25 @@ export function Pizza(data){
 Pizza.prototype={
     constructor:Pizza,
     render:function(){
-        const pizzaContainerEl=creator.createElwithClass('div', 'pizza-item');
-        const imdWrapper=creator.createElwithClass('div','pizza-item--imd-wrapper');
+        const pizzaContainerEl=creator.createElwithClasses('div', 'pizza-item', 'dish-item');
+        const imdWrapper=creator.createElwithClasses('div','pizza-item--imd-wrapper');
         const img=creator.createElwithAttr('img','src', this.src);
         imdWrapper.append(img);
-        const aboutContainer=creator.createElwithClass('div', 'pizza-item--details');
-        const nameEl=creator.createElwithClass('h2', 'pizza-item--name');
+        const aboutContainer=creator.createElwithClasses('div', 'pizza-item--details', 'stack-w-md');
+        const nameEl=creator.createElwithClasses('h3', 'pizza-item--name');
         nameEl.innerHTML=this.name;
-        const descrEl=creator.createElwithClass('p', 'pizza-item--descr');
+        const descrEl=creator.createElwithClasses('p', 'pizza-item--descr');
         descrEl.innerHTML=this.description;
-        const buyContainer=creator.createElwithClass('div', 'pizza-item--buyBtns');
+        const buyContainer=creator.createElwithClasses('div', 'pizza-item--buyBtns');
         
         for(const key of Object.keys(this.prices)){
-            const sizeEl=creator.createElwithClass('span', 'pizza-item--dish-size');
-            const priceEl=creator.createElwithClass('span', 'pizza-item--dish-prise');
+            const priceContainer=creator.createElwithClasses('div', 'pizza-item--dish-prise-btn')
+            const sizeEl=creator.createElwithClasses('span', 'pizza-item--dish-size');
+            const priceEl=creator.createElwithClasses('span', 'pizza-item--dish-prise');
             sizeEl.innerHTML=key;
-            priceEl.innerHTML=this.prices[key];
-            buyContainer.append(sizeEl, priceEl);
+            priceEl.innerHTML='£'+this.prices[key];
+            priceContainer.append(sizeEl, priceEl)
+            buyContainer.append(priceContainer);
         }
         aboutContainer.append(nameEl, descrEl, buyContainer);
         pizzaContainerEl.append(imdWrapper, aboutContainer);
