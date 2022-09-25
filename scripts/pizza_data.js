@@ -52,4 +52,42 @@ export const p_data=[{
     },
     id:'5'
 }
+];
+
+export const vegan_p_data=[{
+    name:'VEGAN MARGHERITA',
+    descr:'Vegan Cheese & Tomato',
+    img:'../imgs/VeganMargherita.png',
+    prices:{
+        '12"':9.99
+    },
+    id:'6'
+},
+{
+    name:'Mighty Vegan',
+    descr:'Onion, Vegeroni, Meatless Meatballs & Soya Chicken',
+    img:'../imgs/MightyVegan.png',
+    prices:{
+        '12"':9.99
+    },
+    id:'7'
+},
+{
+    name:'Vegan Hot',
+    descr:'Onion, Mushrooms, Soya Chicken, Jalapeno & Mixed Pepper',
+    img:'../imgs/VeganHot.png',
+    prices:{
+        '12"':9.99
+    },
+    id:'8'
+},
+{
+    name:'Vegan Make My Own',
+    descr:'Choose any four toppings of your choice',
+    img:'../imgs/VeganMakeMyOwn.png',
+    prices:{
+        '12"':9.99
+    },
+    id:'9'
+}
 ]
